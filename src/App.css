@@ -1,38 +1,479 @@
+.btn_with{
+  padding-left: 14px;
+  padding-right: 14px;
+}
+
+.btn_step{
+  color: #000000;
+  text-decoration: none;
+  background-color: #ffffff;
+  border-color: #ffffff;
+  display: inline-block;
+  height: 36px;
+  font-size: 14px;
+  line-height: 39px;
+  padding: 0 15px;
+  text-align: center;
+  font-family: 'NotoSans Regular','Malgun Gothic','맑은 고딕','Apple SD Gothic Neo','돋움',dotum, sans-serif;
+  position: absolute;
+  left: 0;
+  margin-left: 5vw;
+  margin-top: 5vh;
+}
+
+.btn_step:hover{
+  color: #ffffff;
+  background-color: #000000;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.ico_corp{
+  display: inline-block;
+  overflow: hidden;
+  font-size: 0;
+  line-height: 0;
+  background: url(//t1.kakaocdn.net/kakaocorp/pw/ico_corp_181031.png) no-repeat;
+  text-align: inherit;
+  vertical-align: top;
+}
+
+.ico_arr{
+  width: 6px;
+  height: 9px;
+  margin: 14px 0 0 22px;
+  background-position: -115px -65px;
+}
+
+.btn_step:hover .ico_arr{
+  background-position: -130px -65px;
+}
+
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  width: 100%;
+  height: auto;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.header {
+  z-index: 101;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  padding: 0 5vw;
+  height: 70px;
+  text-align: center;
+  margin: 0 auto;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: transparent;
+  justify-content: space-between;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.after_header{
+  z-index: 101;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  padding: 0 5vw;
+  height: 70px;
+  text-align: center;
+  margin: 0 auto;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: transparent;
+  justify-content: space-between;
+  background-color: white;
+  border-bottom: 1px #e5e5e5 solid;
+}
+
+.header:hover{
+  z-index: 101;
+  background-color: white;
+  border-bottom: 1px #e5e5e5 solid;
+}
+
+.headerlogo_1 {
+  width: 24%;
+  margin-top: 3.5vh;
+  height: auto;
+  background: url(//t1.kakaocdn.net/kakaocorp/pw/logo_kakao.png) no-repeat 0 0;
+  color: transparent;
+}
+
+.headermenu_1{
+  width: 55%;
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  margin-top: 3.5vh;
+  font-size: 1vw;
+  font-weight: bold;
+  
+}
+
+.headermenu_1 li{
+  margin-left: 1.5vw;
+  width: 5vw;
+}
+
+.headerlang_1{
+  width: 21%;
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  margin-top: 3.5vh;
+  font-size: 1vw;
+  font-weight: bold;
+  padding-left: 13%;
+}
+
+.headerlang_1 li{
+  margin-left: 1.5vw;
+}
+
+.headerlogo_2 {
+  width: 24%;
+  margin-top: 3.5vh;
+  height: auto;
+  background: url(//t1.kakaocdn.net/kakaocorp/pw/logo_kakao_white.png) no-repeat;
+  color: transparent;
+}
+
+.headermenu_2{
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  margin-top: 3.5vh;
+  font-size: 1vw;
+  font-weight: bold;
+  width: 55%;
+  color: #ffffff;
+}
+
+.headermenu_2 li{
+  margin-left: 1.5vw;
+  width: 5vw;
+}
+
+.headerlang_2{
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  margin-top: 3.5vh;
+  color: #ffffff;
+  font-size: 1vw;
+  font-weight: bold;
+  width: 21%;
+  padding-left: 13%;
+}
+
+.headerlang_2 li{
+  margin-left: 1.5vw;
+}
+
+.header:hover .headerlogo_2{
+  width: 24%;
+  margin-top: 3.5vh;
+  height: auto;
+  background: url(//t1.kakaocdn.net/kakaocorp/pw/logo_kakao.png) no-repeat 0 0;
+  color: transparent;
+}
+
+.header:hover .headermenu_2{
+  color: #000000;
+}
+
+.header:hover .headerlang_2{
+  color: #000000;
+}
+
+@media screen and (max-width: 956px){
+   .headermenu_1, .headermenu_2{
+    display: none;
+   }
+
+   .headerlang_1, .headerlang_2{
+     font-size: 2vw;
+     width: 30%;
+   }
+
+   .headerlogo_2, .headerlogo_1{
+     width: 50%;
+   }
+}
+
+.banner{
+  height: 700px;
+}
+
+.bannerslide_1{
+  background-image: url(https://t1.kakaocdn.net/kakaocorp/admin/main-banner/1652);
+  background-size: 100% 100%;
+  height: 700px;
+}
+
+.bannerslide_1 p{
+  padding-top: 120px;
+  margin: 0 5vw;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 48px;
+  color: #ffffff;
+  text-align: left;
+}
+
+.bannerslide_2{
+  background-image: url(https://t1.kakaocdn.net/kakaocorp/admin/main-banner/1657);
+  height: 700px;
+}
+
+.bannerslide_2 p{
+  padding-top: 120px;
+  margin: 0 5vw;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 48px;
+  color: black;
+  text-align: left;
+}
+
+.bannerslide_3{
+  background-image: url(https://t1.kakaocdn.net/kakaocorp/operating/co/main-banner/2928.png);
+  height: 700px;
+}
+
+.bannerslide_3 p{
+  padding-top: 120px;
+  margin: 0 5vw;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 48px;
+  color: #ffffff;
+  text-align: left;
+}
+
+.bannerslide_4{
+  background-image: url(https://t1.kakaocdn.net/kakaocorp/operating/co/main-banner/3189.png);
+  height: 700px;
+}
+
+.bannerslide_4 p{
+  padding-top: 120px;
+  margin: 0 5vw;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 48px;
+  color: black;
+  text-align: left;
+}
+
+.summary {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  padding: 5vh 5vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  text-align: left;
+}
+
+.summary_info {
+  float: left;
+  width: 33.3%;
+  padding: 0 1vw;
+}
+
+.summary_h3{
+  font-weight: normal;
+  font-size: 14px;
+  font-family: 'NotoSans Regular','Malgun Gothic','맑은 고딕','Apple SD Gothic Neo','돋움',dotum, sans-serif;
+  color: #1e1e1e;
+}
+
+.link_newsfeed {
+  text-decoration: none;
+  color: #333;
+}
+
+.summary_strong {
+  padding-top: 2vh;
+  font-size: 20px;
+  line-height: 32px;
+  color: #1e1e1e;
+}
+
+.summary_p{
+  overflow: hidden;
+  max-height: 20vh;
+  padding-top: 2vh;
+  font-size: 14px;
+  line-height: 22px;
+  color: #666;
+}
+
+.summary_stock{
+  font-size: 35px;
+  color: #1e1e1e;
+}
+
+.main_stock {
+  padding-top: 4vh;
+  display: flex;
+  flex-direction: row;
+}
+
+.summary_ico{
+  background: url(//t1.kakaocdn.net/kakaocorp/pw/ico_corp_181031.png) no-repeat;
+  background-position: -40px -20px;
+  overflow: hidden;
+  width: 20px;
+  height: 10px;
+  margin: 3.5vh 0 0 3vw;
+}
+
+.num_stock{
+  color: #ff0018;
+  font-size: 20px;
+  margin: 2vh 0 0 0.5vw;
+}
+
+
+
+.stock_p{
+  font-size: 12px;
+  margin-top: 3vh;
+  padding: 0;
+  color: #666;
+}
+
+.privacy_main {
+  margin-top: 3vh;
+}
+
+.service {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  padding: 2vh 5vw 10vh 5vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  text-align: left;
+}
+
+.service_info {
+  float: left;
+  width: 33.3%;
+  padding: 0 1vw;
+}
+
+.service_news{
+  text-decoration: none;
+  color: #333333;
+}
+
+.service_h3{
+  position: absolute;
+  padding: 1vw;
+  color: #1e1e1e;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+.service_white{
+  position: absolute;
+  padding: 1vw;
+  color: #ffffff;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+.service_img{
+  width: 100%;
+  margin-bottom: 2vh;
+}
+
+@media screen and (max-width : 580px){
+  .banner{
+    display: none;
   }
-  to {
-    transform: rotate(360deg);
+  .header{
+    z-index: 101;
+    background-color: white;
+    border-bottom: 1px #e5e5e5 solid;
+  }
+
+  .headerlogo_2{
+    width: 24%;
+    margin-top: 3.5vh;
+    height: auto;
+    background: url(//t1.kakaocdn.net/kakaocorp/pw/logo_kakao.png) no-repeat 0 0;
+    color: transparent;
+  }
+
+  .headermenu_2, .headerlang_2{
+    color: #000000;
+  }
+
+  .summary{
+    margin-top: 10vh;
+    flex-direction: column;
+  }
+
+  .summary_info{
+    padding: 7vh 0;
+    width: 100%;
+    border-bottom: 1px #e5e5e5 solid;
+  }
+
+  .service{
+    flex-direction: column;
+  }
+
+  .service_info{
+    padding: 7vh 0;
+    width: 100%;
+    border-bottom: 1px #e5e5e5 solid;
+  }
+
+  .service:last-child{
+    border: none;
   }
 }
+
+.footer{
+  display: flex;
+  flex-direction: row;
+  border-top: 1px #e5e5e5 solid;
+  width: 100%;
+  height: 100px;
+  margin: 10vh 0 0 0;
+  padding:  2vh 5vw 0;
+  justify-content: space-between;
+}
+
+.footer_right{
+    margin-top: 3vh;
+}
+
+.footer_right p{
+  overflow: hidden;
+  max-height: 20vh;
+  padding-top: 1vh;
+  font-size: 12px;
+  line-height: 22px;
+  color: #666;
+}
+
+.footer_left{
+    margin-top: 3vh; 
+}
+
+
+
