@@ -113,12 +113,14 @@
   margin-top: 3.5vh;
   font-size: 1vw;
   font-weight: bold;
-  
+  margin-bottom: 0;
 }
 
-.headermenu_1 li{
+.headermenu_1 > li{
   margin-left: 1.5vw;
   width: 5vw;
+  height: 70px;
+  cursor: pointer;
 }
 
 .headerlang_1{
@@ -132,7 +134,7 @@
   padding-left: 13%;
 }
 
-.headerlang_1 li{
+.headerlang_1 > li{
   margin-left: 1.5vw;
 }
 
@@ -155,9 +157,48 @@
   color: #ffffff;
 }
 
-.headermenu_2 li{
+.headerdiv{
+  position: absolute;
+  display: none;
+  width : 100%;
+  left : 0;
+  top : 70px;
+  padding : 50px 20px;
+  height: auto;
+  background-color: white;
+}
+
+.headerdiv ul{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0px 160px;
+}
+
+.headerdiv ul li{
+  display: flex;
+  flex-direction: column;
+}
+
+.header .on .headerdiv{
+  display: block;
+}
+
+.headermenu_2 > li{
   margin-left: 1.5vw;
   width: 5vw;
+}
+
+.headermenu_2 li a{
+  text-decoration: none;
+  color: white;
+}
+
+
+
+.headermenu_1 li a{
+  text-decoration: none;
+  color : black;
 }
 
 .headerlang_2{
@@ -172,7 +213,7 @@
   padding-left: 13%;
 }
 
-.headerlang_2 li{
+.headerlang_2 > li{
   margin-left: 1.5vw;
 }
 
@@ -185,6 +226,9 @@
 }
 
 .header:hover .headermenu_2{
+  color: #000000;
+}
+.header:hover .headermenu_2 a{
   color: #000000;
 }
 
@@ -283,7 +327,7 @@
   text-align: left;
 }
 
-.summary_info {
+.summary_info{
   float: left;
   width: 33.3%;
   padding: 0 1vw;
@@ -407,6 +451,11 @@
     z-index: 101;
     background-color: white;
     border-bottom: 1px #e5e5e5 solid;
+  }
+
+  .headerlang_1, .headerlang_2{
+    width: 40%;
+    font-size: 3vw;
   }
 
   .headerlogo_2{
