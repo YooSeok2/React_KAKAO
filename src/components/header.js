@@ -29,8 +29,8 @@ class Header extends Component{
         div_customer = null;
         div_humanresource = null;
 
-        //해당 리스트 ul ref값
-        ul_kakao = null;
+        
+        
         
     constructor(props){
         super(props)
@@ -64,13 +64,11 @@ class Header extends Component{
             div_humanresource : this.div_humanresource,
             div_service : this.div_service,
             div_social : this.div_social,
-
-            //해당 리스트 ul 값 ref
-            ul_kakao : this.ul_kakao,
+            
 
             on : "on"
         });
-     
+        window.addEventListener('mouseover', this.headerListener, true);
         window.addEventListener('scroll', this.handleScroll, true);
     }
 
@@ -80,7 +78,7 @@ class Header extends Component{
     
     componentWillUnmount() {
         window.removeEventListener('scroll', this.handleScroll);
-        window.removeEventListener('focus', this.headerListener);
+       window.removeEventListener('mouseover', this.headerListener);
     }
       
     handleScroll = async() => {
@@ -100,53 +98,49 @@ class Header extends Component{
     };
 
     headerListener=(e)=>{
-        if(this.state.header){
-            if(e.target === this.state.header_kakao || e.target === this.state.a_kakao || e.target ===this.state.div_kakao || e.target ===this.state.ul_kakao ){ 
-                this.state.header_kakao.setAttribute("class", this.state.on);
-                this.state.header_kakao.focus();
-            }else{
-                this.state.header_kakao.setAttribute('class', '');
-            }
+        if( e.target === this.state.a_kakao){
+            // e.target.addEventListener('click', this.listFocusListener, true);
+            e.target.click(()=>{
+                this.listFocusListener()
+            });
+        }
 
-            if(e.target === this.state.header_invest || e.target === this.state.a_invest || e.target ===this.state.div_invest){
-                this.state.header_invest.setAttribute('class', this.state.on);
-            }else{
-                this.state.header_invest.setAttribute('class', '');
-            }
-
-            if(e.target === this.state.header_service || e.target === this.state.a_service || e.target ===this.state.div_service){
-                this.state.header_service.setAttribute('class', this.state.on);
-            }else{
-                this.state.header_service.setAttribute('class', '');
-            }
-
-            if(e.target === this.state.header_social || e.target === this.state.a_social || e.target ===this.state.div_social){
-                this.state.header_social.setAttribute('class', this.state.on);
-                this.state.header_social.focus();
-            }else{
-                this.state.header_social.setAttribute('class', '');
-            }
+        if(e.target === this.state.header_invest || e.target === this.state.a_invest){
             
-            if(e.target === this.state.header_customer || e.target === this.state.a_customer || e.target ===this.state.div_customer){
-                this.state.header_customer.setAttribute('class', this.state.on);
-            }else{
-                this.state.header_customer.setAttribute('class', '');
-            }
+        }
+
+        if(e.target === this.state.header_service || e.target === this.state.a_service){
             
-            if(e.target === this.state.header_humanresource || e.target === this.state.a_humanresource || e.target ===this.state.div_humanresource){
-                this.state.header_humanresource.setAttribute('class', this.state.on);
-            }else{
-                this.state.header_humanresource.setAttribute('class', '');
-            }
+        }
+
+        if(e.target === this.state.header_social || e.target === this.state.a_social){
+            
+        }
+
+        if(e.target === this.state.header_customer || e.target === this.state.a_customer){
+            
+        }
+
+        if(e.target === this.state.header_humanresource || e.target === this.state.a_humanresource){
             
         }
     }
+
+    listFocusListener=(e)=>{
+        if(e.target.focus()){
+            console.log(e.target.parentNode);
+            e.target.parentNode.setAttribute("class", this.state.on);
+        }
+        if(e.target.blur()){
+            console.log('blur')
+            e.target.parentNode.setAttribute('class', '');
+        }
+        
+        
+    }
     
     render(){
-        if(this.state.header){
-            this.state.header.addEventListener('focus', this.headerListener, true);
-            this.state.header.addEventListener('mouseover', this.headerListener, true);
-        }
+        
         
         return(
             this.state.ticking === false ?
@@ -155,11 +149,11 @@ class Header extends Component{
             <nav ref={this.nav}>           
                 <div className ="header" ref = {ref=>{this.header = ref}}>
                     <span className="headerlogo_1">kakao</span>
-                    <ul className = 'headermenu_1'>
+                    <ul className = 'headermenu_1'> 
                         <li ref = {ref=>{this.header_kakao = ref}}>
-                            <a href="#none" ref={ref=>{this.a_kakao = ref}}>카카오</a>
+                            <a href="#none" ref={ref=>{this.a_kakao = ref}} onClick={this.listFocusListener}>카카오</a>
                             <div className="headerdiv" ref = {ref=>{this.div_kakao = ref}}>
-                                <ul ref = {ref=>{this.ul_kakao = ref}}>
+                                <ul>
                                     <li>
                                         <strong>카카오 소개</strong>
                                         <a href="#none"><span>비전</span></a>
