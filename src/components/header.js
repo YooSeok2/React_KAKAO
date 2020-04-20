@@ -28,7 +28,7 @@ class Header extends Component{
         div_service = null;
         div_customer = null;
         div_humanresource = null;
-
+   
         
         
         
@@ -37,10 +37,26 @@ class Header extends Component{
         this.state={
             lastScrollY : 0,
             ticking : false,
+           
         }
     }
 
+    //header ul tag click event
+    listFocusListener=(e)=>{
+        e.target.focus()
+        e.target.parentNode.setAttribute("class", this.state.on)
+       
+        let m_blur = e.target.parentNode
+        console.log(m_blur)
+        m_blur.addEventListener('blur', ()=>{
+            m_blur.setAttribute('class', '')
+        }, true)
+        ;
+
+    }
+
     componentDidMount(){
+        
        this.setState({
             header : this.header,
             //헤더 리스트 ref 값 state값으로 저장
@@ -65,9 +81,10 @@ class Header extends Component{
             div_service : this.div_service,
             div_social : this.div_social,
             
-
+            
             on : "on"
         });
+        
         window.addEventListener('mouseover', this.headerListener, true);
         window.addEventListener('scroll', this.handleScroll, true);
     }
@@ -98,46 +115,34 @@ class Header extends Component{
     };
 
     headerListener=(e)=>{
-        if( e.target === this.state.a_kakao){
+        if(e.target === this.state.a_kakao){
             // e.target.addEventListener('click', this.listFocusListener, true);
-            e.target.click(()=>{
-                this.listFocusListener()
-            });
+            e.target.click();
         }
 
         if(e.target === this.state.header_invest || e.target === this.state.a_invest){
-            
+            e.target.click();
         }
 
         if(e.target === this.state.header_service || e.target === this.state.a_service){
-            
+            e.target.click();
         }
 
         if(e.target === this.state.header_social || e.target === this.state.a_social){
-            
+            e.target.click();
         }
 
         if(e.target === this.state.header_customer || e.target === this.state.a_customer){
-            
+            e.target.click();
         }
 
         if(e.target === this.state.header_humanresource || e.target === this.state.a_humanresource){
-            
+            e.target.click();
         }
     }
 
-    listFocusListener=(e)=>{
-        if(e.target.focus()){
-            console.log(e.target.parentNode);
-            e.target.parentNode.setAttribute("class", this.state.on);
-        }
-        if(e.target.blur()){
-            console.log('blur')
-            e.target.parentNode.setAttribute('class', '');
-        }
-        
-        
-    }
+    
+
     
     render(){
         
@@ -195,7 +200,7 @@ class Header extends Component{
                         </li>
                         {/* 투자정보 */}
                         <li ref = {ref=>{this.header_invest = ref}}>
-                        <a href="#none" ref={ref=>{this.a_invest=ref}} >투자정보</a>
+                        <a href="#none" ref={ref=>{this.a_invest=ref}} onClick={this.listFocusListener} >투자정보</a>
                             <div className="headerdiv" ref = {ref=>{this.div_invest=ref}}>
                                 <ul>
                                     <li>
@@ -239,7 +244,7 @@ class Header extends Component{
                         </li>
                         {/* 서비스 */}
                         <li ref = {ref=>{this.header_service = ref}}>
-                        <a href="#none" ref={ref=>{this.a_service = ref}} >서비스</a>
+                        <a href="#none" ref={ref=>{this.a_service = ref}} onClick={this.listFocusListener} >서비스</a>
                             <div className="headerdiv" ref = {ref=>{this.div_service =ref}}>
                                 <ul>
                                     <li>
@@ -283,7 +288,7 @@ class Header extends Component{
                         </li>
                         {/* 소셜임팩트 */}
                         <li ref = {ref=>{this.header_social = ref}} >
-                        <a href="#none" ref={ref=>{this.a_social = ref}} >소셜임팩트</a>
+                        <a href="#none" ref={ref=>{this.a_social = ref}} onClick={this.listFocusListener} >소셜임팩트</a>
                             <div className="headerdiv" ref = {ref=>{this.div_social =ref}}>
                                 <ul>
                                     <li>
@@ -327,7 +332,7 @@ class Header extends Component{
                         </li>
                         {/* 고객지원 */}
                         <li ref = {ref=>{this.header_customer = ref;}} >
-                        <a href="#none" ref={ref=>{this.a_customer=ref}}>고객지원</a>
+                        <a href="#none" ref={ref=>{this.a_customer=ref}} onClick={this.listFocusListener}>고객지원</a>
                             <div className="headerdiv" ref = {ref=>{this.div_customer=ref}}>
                                 <ul>
                                     <li>
@@ -371,7 +376,7 @@ class Header extends Component{
                         </li>
                         {/* 인재영입 */}
                         <li ref = {ref=>{this.header_humanresource = ref;}} >
-                        <a href="#none" ref={ref=>{this.a_humanresource = ref}} >인재영입</a>
+                        <a href="#none" ref={ref=>{this.a_humanresource = ref}} onClick={this.listFocusListener} >인재영입</a>
                             <div className="headerdiv" ref = {ref=>{this.div_humanresource=ref}}>
                                 <ul>
                                     <li>
