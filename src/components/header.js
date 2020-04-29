@@ -4,7 +4,7 @@ import '../App.css';
 
 class Header extends Component{
         header = null;
-
+        y_value = null;
         // 헤더 리스트 ref값
         header_kakao = null;
         header_invest = null;
@@ -37,7 +37,7 @@ class Header extends Component{
         this.state={
             lastScrollY : 0,
             ticking : false,
-           
+            nowpageY : null
         }
     }
 
@@ -47,7 +47,8 @@ class Header extends Component{
         e.target.parentNode.setAttribute("class", this.state.on)
        
         let m_blur = e.target.parentNode
-        console.log(m_blur)
+        console.log(this.div_kakao.clientHeight+70)
+        
         m_blur.addEventListener('blur', ()=>{
             m_blur.setAttribute('class', '')
         }, true)
@@ -84,13 +85,25 @@ class Header extends Component{
             
             on : "on"
         });
-        
+        window.addEventListener('mousemove', this.overMouseY, true)
         window.addEventListener('mouseover', this.headerListener, true);
         window.addEventListener('scroll', this.handleScroll, true);
     }
 
+    overMouseY = (e)=>{
+        this.y_value = e.pageY
+        console.log(this.y_value)
+
+        if(this.y_value>0){
+        this.setState({
+            nowpageY : this.y_value
+        })
+    }
+    }
+
     componentDidUpdate(prevProps, prevState){
-        
+        window.addEventListener('mouseover', this.headerListener, true);
+        window.addEventListener('scroll', this.handleScroll, true);
     }
     
     componentWillUnmount() {
@@ -145,8 +158,7 @@ class Header extends Component{
 
     
     render(){
-        
-        
+        this.overMouseY();
         return(
             this.state.ticking === false ?
             [
