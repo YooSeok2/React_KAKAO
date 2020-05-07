@@ -184,6 +184,10 @@
   display: block;
 }
 
+.after_header .on .headerdiv{
+  display: block;
+}
+
 .headermenu_2 > li{
   margin-left: 1.5vw;
   width: 5vw;
