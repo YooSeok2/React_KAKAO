@@ -45,7 +45,7 @@ class Header extends Component{
     listFocusListener=(e)=>{
         e.target.focus()
         const target = e.target
-        console.log(target)
+        
         let target_parent = e.target.parentNode
         target_parent.setAttribute("class", this.state.on)
         target.addEventListener('blur', ()=>{
@@ -180,7 +180,7 @@ class Header extends Component{
                             <div className="headerdiv" ref = {ref=>{this.div_kakao = ref}}>
                                 <ul>
                                     <li>
-                                        <strong>카카오 소개</strong>
+                                        <a href="#none"><strong>카카오 소개</strong></a>
                                         <a href="#none"><span>비전</span></a>
                                         <a href="#none"><span>카카오 문화</span></a>
                                         <a href="#none"><span>걸어온 길</span></a>
@@ -188,31 +188,31 @@ class Header extends Component{
                                         <a href="#none"><span>윤리규정</span></a>
                                     </li>
                                     <li>
-                                        <strong>카카오 AI</strong>
+                                        <a href="#none"><strong>카카오 AI</strong></a>
                                         <a href="#none"><span>소개</span></a>
                                         <a href="#none"><span>알고리즘 윤리</span></a>
                                             
                                     </li>
                                     <li>
-                                        <strong>자회사</strong>
+                                        <a href="#none"><strong>자회사</strong></a>
                                     
                                     </li>
                                     <li>
-                                        <strong>비즈니스</strong>
+                                        <a href="#none"><strong>비즈니스</strong></a>
                                         <a href="#none"><span>광고 안내</span></a>
                                         <a href="#none"><span>제휴 안내</span></a>
                                         <a href="#none"><span>KaKa for Business</span></a>
                                        
                                     </li>
                                     <li>
-                                        <strong>홍보 채널</strong>
+                                        <a href="#none"><strong>홍보 채널</strong></a>
                                         <a href="#none"><span>보도 자료</span></a>
                                         <a href="#none"><span>브랜드 영상</span></a>
                                         <a href="#none"><span>미디어 행사</span></a>
                                         <a href="#none"><span>KaKao Travel Day</span></a>
                                     </li>
                                     <li>
-                                        <strong>오시는 길</strong>
+                                        <a href="#none"><strong>오시는 길</strong></a>
                                       
                                     </li>
                                 </ul>
@@ -224,7 +224,7 @@ class Header extends Component{
                             <div className="headerdiv" ref = {ref=>{this.div_invest=ref}}>
                                 <ul>
                                     <li>
-                                        <strong>경영정보</strong>
+                                        <a href="#none"><strong>경영정보</strong></a>
                                         <a href="#none"><span>주주구성</span></a>
                                         <a href="#none"><span>이사회</span></a>
                                         <a href="#none"><span>정관</span></a>
@@ -232,27 +232,27 @@ class Header extends Component{
         
                                     </li>
                                     <li>
-                                        <strong>재무정보</strong>
+                                        <a href="#none"><strong>재무정보</strong></a>
                                         <a href="#none"><span>연결재무제표</span></a>
                                         <a href="#none"><span>별도재무제표</span></a>
                                         <a href="#none"><span>신용등급</span></a>
                                             
                                     </li>
                                     <li>
-                                        <strong>IR일정</strong>
+                                        <a href="#none"><strong>IR일정</strong></a>
                                         <a href="#none"><span>IR행사</span></a>
                                         <a href="#none"><span>주주총회</span></a>
                                         <a href="#none"><span>IR미팅예약</span></a>
                                     </li>
                                     <li>
-                                        <strong>IR자료실</strong>
+                                        <a href="#none"><strong>IR자료실</strong></a>
                                         <a href="#none"><span>실적발표</span></a>
                                         <a href="#none"><span>정기보고서</span></a>
                                         <a href="#none"><span>IR FAQ</span></a>
                                        
                                     </li>
                                     <li>
-                                        <strong>공고</strong>
+                                        <a href="#none"><strong>공고</strong></a>
                                         <a href="#none"><span>배달정보</span></a>
                                         <a href="#none"><span>공고사항</span></a>
                                         <a href="#none"><span>주주제안권</span></a>
@@ -267,14 +267,14 @@ class Header extends Component{
                             <div className="headerdiv" ref = {ref=>{this.div_service =ref}}>
                                 <ul>
                                     <li>
-                                        <strong>포털</strong>
+                                        <a href="#none"><strong>포털</strong></a>
                                         <a href="#none"><span>Daum</span></a>
                                         <a href="#none"><span>Daum 뉴스</span></a>
                                         <a href="#none"><span>Daum 검색</span></a>
                                         
                                     </li>
                                     <li>
-                                        <strong>커뮤니케이션</strong>
+                                        <a href="#none"><strong>커뮤니케이션</strong></a>
                                         <a href="#none"><span>카카오톡</span></a>
                                         <a href="#none"><span>카카오스토리</span></a>
                                         <a href="#none"><span>카카오톡 치즈</span></a>
@@ -285,24 +285,24 @@ class Header extends Component{
                                         <a href="#none"><span>브런치</span></a>
                                     </li>
                                     <li>
-                                        <strong>콘텐츠</strong>
+                                        <a href="#none"><strong>콘텐츠</strong></a>
                                         <a href="#none"><span>카카오페이지</span></a>
                                         <a href="#none"><span>카카오TV</span></a>
                                         <a href="#none"><span>카카오뮤직</span></a>
                                         <a href="#none"><span>카카오프렌즈</span></a>
                                     </li>
                                     <li>
-                                        <strong>Daum웹툰</strong>
+                                        <a href="#none"><strong>Daum웹툰</strong></a>
 
                                     </li>
                                     <li>
-                                        <strong>게임</strong>
+                                        <a href="#none"><strong>게임</strong></a>
                                         <a href="#none"><span>카카오게임즈</span></a>
                                         <a href="#none"><span>핀테크</span></a>
                                         <a href="#none"><span>카카오페이</span></a>
                                     </li>
                                     <li>
-                                        <strong>모빌리티&라이프</strong>  
+                                        <a href="#none"><strong>모빌리티&라이프</strong></a>  
                                         <a href="#none"><span>카카오T</span></a>
                                         <a href="#none"><span>카카오T대리</span></a>
                                         <a href="#none"><span>카카오내비</span></a>    
@@ -312,7 +312,7 @@ class Header extends Component{
                                         <a href="#none"><span>카카오헤어샵</span></a>
                                     </li>
                                     <li>
-                                        <strong>소셜임팩트</strong>   
+                                        <a href="#none"><strong>소셜임팩트</strong></a>   
                                         <a href="#none"><span>카카오같이가치</span></a>                                   
                                     </li>
                                 </ul>
@@ -324,32 +324,32 @@ class Header extends Component{
                             <div className="headerdiv" ref = {ref=>{this.div_social =ref}}>
                                 <ul>
                                     <li>
-                                        <strong>소셜임팩트 서비스</strong>
+                                        <a href="#none"><strong>소셜임팩트 서비스</strong></a>
                                         <a href="#none"><span>카카오같이가치</span></a>
                                         <a href="#none"><span>카카오메이커스</span></a>
                                         
                                     </li>
                                     <li>
-                                        <strong>사회공헌</strong>
+                                        <a href="#none"><strong>사회공헌</strong></a>
                                         <a href="#none"><span>Next</span></a>
                                         <a href="#none"><span>Connect</span></a>
                                         <a href="#none"><span>Kakao krew</span></a>
                                     </li>
                                     <li>
-                                        <strong>상생</strong>
+                                        <a href="#none"><strong>상생</strong></a>
                                         <a href="#none"><span>상생센터</span></a>
                                         <a href="#none"><span>상생서포터즈</span></a>
                                         <a href="#none"><span>Kakao 클래스</span></a>
                                     </li>
                                     <li>
-                                        <strong>제주지역협력</strong>
+                                        <a href="#none"><strong>제주지역협력</strong></a>
                                         <a href="#none"><span>교육 산학</span></a>
                                         <a href="#none"><span>지역 상생</span></a>
                                         <a href="#none"><span>문화 교류</span></a>
                                         <a href="#none"><span>제주창조경제혁신센터</span></a>
                                     </li>
                                     <li>
-                                        <strong>제주창조경제혁신센터</strong>
+                                        <a href="#none"><strong>제주창조경제혁신센터</strong></a>
                                         
                                     </li>
                             
@@ -381,7 +381,7 @@ class Header extends Component{
                             <div className="headerdiv" ref = {ref=>{this.div_kakao = ref}}>
                                 <ul>
                                     <li>
-                                        <strong>카카오 소개</strong>
+                                        <a href="#none"><strong>카카오 소개</strong></a>
                                         <a href="#none"><span>비전</span></a>
                                         <a href="#none"><span>카카오 문화</span></a>
                                         <a href="#none"><span>걸어온 길</span></a>
@@ -389,31 +389,31 @@ class Header extends Component{
                                         <a href="#none"><span>윤리규정</span></a>
                                     </li>
                                     <li>
-                                        <strong>카카오 AI</strong>
+                                        <a href="#none"><strong>카카오 AI</strong></a>
                                         <a href="#none"><span>소개</span></a>
                                         <a href="#none"><span>알고리즘 윤리</span></a>
                                             
                                     </li>
                                     <li>
-                                        <strong>자회사</strong>
+                                        <a href="#none"><strong>자회사</strong></a>
                                     
                                     </li>
                                     <li>
-                                        <strong>비즈니스</strong>
+                                        <a href="#none"><strong>비즈니스</strong></a>
                                         <a href="#none"><span>광고 안내</span></a>
                                         <a href="#none"><span>제휴 안내</span></a>
                                         <a href="#none"><span>KaKa for Business</span></a>
                                        
                                     </li>
                                     <li>
-                                        <strong>홍보 채널</strong>
+                                        <a href="#none"><strong>홍보 채널</strong></a>
                                         <a href="#none"><span>보도 자료</span></a>
                                         <a href="#none"><span>브랜드 영상</span></a>
                                         <a href="#none"><span>미디어 행사</span></a>
                                         <a href="#none"><span>KaKao Travel Day</span></a>
                                     </li>
                                     <li>
-                                        <strong>오시는 길</strong>
+                                        <a href="#none"><strong>오시는 길</strong></a>
                                       
                                     </li>
                                 </ul>
@@ -425,7 +425,7 @@ class Header extends Component{
                             <div className="headerdiv" ref = {ref=>{this.div_invest=ref}}>
                                 <ul>
                                     <li>
-                                        <strong>경영정보</strong>
+                                        <a href="#none"><strong>경영정보</strong></a>
                                         <a href="#none"><span>주주구성</span></a>
                                         <a href="#none"><span>이사회</span></a>
                                         <a href="#none"><span>정관</span></a>
@@ -433,27 +433,27 @@ class Header extends Component{
         
                                     </li>
                                     <li>
-                                        <strong>재무정보</strong>
+                                        <a href="#none"><strong>재무정보</strong></a>
                                         <a href="#none"><span>연결재무제표</span></a>
                                         <a href="#none"><span>별도재무제표</span></a>
                                         <a href="#none"><span>신용등급</span></a>
                                             
                                     </li>
                                     <li>
-                                        <strong>IR일정</strong>
+                                        <a href="#none"><strong>IR일정</strong></a>
                                         <a href="#none"><span>IR행사</span></a>
                                         <a href="#none"><span>주주총회</span></a>
                                         <a href="#none"><span>IR미팅예약</span></a>
                                     </li>
                                     <li>
-                                        <strong>IR자료실</strong>
+                                        <a href="#none"><strong>IR자료실</strong></a>
                                         <a href="#none"><span>실적발표</span></a>
                                         <a href="#none"><span>정기보고서</span></a>
                                         <a href="#none"><span>IR FAQ</span></a>
                                        
                                     </li>
                                     <li>
-                                        <strong>공고</strong>
+                                        <a href="#none"><strong>공고</strong></a>
                                         <a href="#none"><span>배달정보</span></a>
                                         <a href="#none"><span>공고사항</span></a>
                                         <a href="#none"><span>주주제안권</span></a>
@@ -468,14 +468,14 @@ class Header extends Component{
                             <div className="headerdiv" ref = {ref=>{this.div_service =ref}}>
                                 <ul>
                                     <li>
-                                        <strong>포털</strong>
+                                        <a href="#none"><strong>포털</strong></a>
                                         <a href="#none"><span>Daum</span></a>
                                         <a href="#none"><span>Daum 뉴스</span></a>
                                         <a href="#none"><span>Daum 검색</span></a>
                                         
                                     </li>
                                     <li>
-                                        <strong>커뮤니케이션</strong>
+                                        <a href="#none"><strong>커뮤니케이션</strong></a>
                                         <a href="#none"><span>카카오톡</span></a>
                                         <a href="#none"><span>카카오스토리</span></a>
                                         <a href="#none"><span>카카오톡 치즈</span></a>
@@ -486,24 +486,24 @@ class Header extends Component{
                                         <a href="#none"><span>브런치</span></a>
                                     </li>
                                     <li>
-                                        <strong>콘텐츠</strong>
+                                        <a href="#none"><strong>콘텐츠</strong></a>
                                         <a href="#none"><span>카카오페이지</span></a>
                                         <a href="#none"><span>카카오TV</span></a>
                                         <a href="#none"><span>카카오뮤직</span></a>
                                         <a href="#none"><span>카카오프렌즈</span></a>
                                     </li>
                                     <li>
-                                        <strong>Daum웹툰</strong>
+                                        <a href="#none"><strong>Daum웹툰</strong></a>
 
                                     </li>
                                     <li>
-                                        <strong>게임</strong>
+                                        <a href="#none"><strong>게임</strong></a>
                                         <a href="#none"><span>카카오게임즈</span></a>
                                         <a href="#none"><span>핀테크</span></a>
                                         <a href="#none"><span>카카오페이</span></a>
                                     </li>
                                     <li>
-                                        <strong>모빌리티&라이프</strong>  
+                                        <a href="#none"><strong>모빌리티&라이프</strong></a>  
                                         <a href="#none"><span>카카오T</span></a>
                                         <a href="#none"><span>카카오T대리</span></a>
                                         <a href="#none"><span>카카오내비</span></a>    
@@ -513,7 +513,7 @@ class Header extends Component{
                                         <a href="#none"><span>카카오헤어샵</span></a>
                                     </li>
                                     <li>
-                                        <strong>소셜임팩트</strong>   
+                                        <a href="#none"><strong>소셜임팩트</strong></a>   
                                         <a href="#none"><span>카카오같이가치</span></a>                                   
                                     </li>
                                 </ul>
@@ -525,32 +525,32 @@ class Header extends Component{
                             <div className="headerdiv" ref = {ref=>{this.div_social =ref}}>
                                 <ul>
                                     <li>
-                                        <strong>소셜임팩트 서비스</strong>
+                                        <a href="#none"><strong>소셜임팩트 서비스</strong></a>
                                         <a href="#none"><span>카카오같이가치</span></a>
                                         <a href="#none"><span>카카오메이커스</span></a>
                                         
                                     </li>
                                     <li>
-                                        <strong>사회공헌</strong>
+                                        <a href="#none"><strong>사회공헌</strong></a>
                                         <a href="#none"><span>Next</span></a>
                                         <a href="#none"><span>Connect</span></a>
                                         <a href="#none"><span>Kakao krew</span></a>
                                     </li>
                                     <li>
-                                        <strong>상생</strong>
+                                        <a href="#none"><strong>상생</strong></a>
                                         <a href="#none"><span>상생센터</span></a>
                                         <a href="#none"><span>상생서포터즈</span></a>
                                         <a href="#none"><span>Kakao 클래스</span></a>
                                     </li>
                                     <li>
-                                        <strong>제주지역협력</strong>
+                                        <a href="#none"><strong>제주지역협력</strong></a>
                                         <a href="#none"><span>교육 산학</span></a>
                                         <a href="#none"><span>지역 상생</span></a>
                                         <a href="#none"><span>문화 교류</span></a>
                                         <a href="#none"><span>제주창조경제혁신센터</span></a>
                                     </li>
                                     <li>
-                                        <strong>제주창조경제혁신센터</strong>
+                                        <a href="#none"><strong>제주창조경제혁신센터</strong></a>
                                         
                                     </li>
                             
@@ -583,7 +583,7 @@ class Header extends Component{
                             <div className="headerdiv" ref = {ref=>{this.div_kakao = ref}}>
                                 <ul>
                                     <li>
-                                        <strong>카카오 소개</strong>
+                                        <a href="#none"><strong>카카오 소개</strong></a>
                                         <a href="#none"><span>비전</span></a>
                                         <a href="#none"><span>카카오 문화</span></a>
                                         <a href="#none"><span>걸어온 길</span></a>
@@ -591,31 +591,31 @@ class Header extends Component{
                                         <a href="#none"><span>윤리규정</span></a>
                                     </li>
                                     <li>
-                                        <strong>카카오 AI</strong>
+                                        <a href="#none"><strong>카카오 AI</strong></a>
                                         <a href="#none"><span>소개</span></a>
                                         <a href="#none"><span>알고리즘 윤리</span></a>
                                             
                                     </li>
                                     <li>
-                                        <strong>자회사</strong>
+                                        <a href="#none"><strong>자회사</strong></a>
                                     
                                     </li>
                                     <li>
-                                        <strong>비즈니스</strong>
+                                        <a href="#none"><strong>비즈니스</strong></a>
                                         <a href="#none"><span>광고 안내</span></a>
                                         <a href="#none"><span>제휴 안내</span></a>
                                         <a href="#none"><span>KaKa for Business</span></a>
                                        
                                     </li>
                                     <li>
-                                        <strong>홍보 채널</strong>
+                                        <a href="#none"><strong>홍보 채널</strong></a>
                                         <a href="#none"><span>보도 자료</span></a>
                                         <a href="#none"><span>브랜드 영상</span></a>
                                         <a href="#none"><span>미디어 행사</span></a>
                                         <a href="#none"><span>KaKao Travel Day</span></a>
                                     </li>
                                     <li>
-                                        <strong>오시는 길</strong>
+                                        <a href="#none"><strong>오시는 길</strong></a>
                                       
                                     </li>
                                 </ul>
@@ -627,7 +627,7 @@ class Header extends Component{
                             <div className="headerdiv" ref = {ref=>{this.div_invest=ref}}>
                                 <ul>
                                     <li>
-                                        <strong>경영정보</strong>
+                                        <a href="#none"><strong>경영정보</strong></a>
                                         <a href="#none"><span>주주구성</span></a>
                                         <a href="#none"><span>이사회</span></a>
                                         <a href="#none"><span>정관</span></a>
@@ -635,27 +635,27 @@ class Header extends Component{
         
                                     </li>
                                     <li>
-                                        <strong>재무정보</strong>
+                                        <a href="#none"><strong>재무정보</strong></a>
                                         <a href="#none"><span>연결재무제표</span></a>
                                         <a href="#none"><span>별도재무제표</span></a>
                                         <a href="#none"><span>신용등급</span></a>
                                             
                                     </li>
                                     <li>
-                                        <strong>IR일정</strong>
+                                        <a href="#none"><strong>IR일정</strong></a>
                                         <a href="#none"><span>IR행사</span></a>
                                         <a href="#none"><span>주주총회</span></a>
                                         <a href="#none"><span>IR미팅예약</span></a>
                                     </li>
                                     <li>
-                                        <strong>IR자료실</strong>
+                                        <a href="#none"><strong>IR자료실</strong></a>
                                         <a href="#none"><span>실적발표</span></a>
                                         <a href="#none"><span>정기보고서</span></a>
                                         <a href="#none"><span>IR FAQ</span></a>
                                        
                                     </li>
                                     <li>
-                                        <strong>공고</strong>
+                                        <a href="#none"><strong>공고</strong></a>
                                         <a href="#none"><span>배달정보</span></a>
                                         <a href="#none"><span>공고사항</span></a>
                                         <a href="#none"><span>주주제안권</span></a>
@@ -670,14 +670,14 @@ class Header extends Component{
                             <div className="headerdiv" ref = {ref=>{this.div_service =ref}}>
                                 <ul>
                                     <li>
-                                        <strong>포털</strong>
+                                        <a href="#none"><strong>포털</strong></a>
                                         <a href="#none"><span>Daum</span></a>
                                         <a href="#none"><span>Daum 뉴스</span></a>
                                         <a href="#none"><span>Daum 검색</span></a>
                                         
                                     </li>
                                     <li>
-                                        <strong>커뮤니케이션</strong>
+                                        <a href="#none"><strong>커뮤니케이션</strong></a>
                                         <a href="#none"><span>카카오톡</span></a>
                                         <a href="#none"><span>카카오스토리</span></a>
                                         <a href="#none"><span>카카오톡 치즈</span></a>
@@ -688,24 +688,24 @@ class Header extends Component{
                                         <a href="#none"><span>브런치</span></a>
                                     </li>
                                     <li>
-                                        <strong>콘텐츠</strong>
+                                        <a href="#none"><strong>콘텐츠</strong></a>
                                         <a href="#none"><span>카카오페이지</span></a>
                                         <a href="#none"><span>카카오TV</span></a>
                                         <a href="#none"><span>카카오뮤직</span></a>
                                         <a href="#none"><span>카카오프렌즈</span></a>
                                     </li>
                                     <li>
-                                        <strong>Daum웹툰</strong>
+                                        <a href="#none"><strong>Daum웹툰</strong></a>
 
                                     </li>
                                     <li>
-                                        <strong>게임</strong>
+                                        <a href="#none"><strong>게임</strong></a>
                                         <a href="#none"><span>카카오게임즈</span></a>
                                         <a href="#none"><span>핀테크</span></a>
                                         <a href="#none"><span>카카오페이</span></a>
                                     </li>
                                     <li>
-                                        <strong>모빌리티&라이프</strong>  
+                                        <a href="#none"><strong>모빌리티&라이프</strong></a>  
                                         <a href="#none"><span>카카오T</span></a>
                                         <a href="#none"><span>카카오T대리</span></a>
                                         <a href="#none"><span>카카오내비</span></a>    
@@ -715,7 +715,7 @@ class Header extends Component{
                                         <a href="#none"><span>카카오헤어샵</span></a>
                                     </li>
                                     <li>
-                                        <strong>소셜임팩트</strong>   
+                                        <a href="#none"><strong>소셜임팩트</strong></a>   
                                         <a href="#none"><span>카카오같이가치</span></a>                                   
                                     </li>
                                 </ul>
@@ -727,32 +727,32 @@ class Header extends Component{
                             <div className="headerdiv" ref = {ref=>{this.div_social =ref}}>
                                 <ul>
                                     <li>
-                                        <strong>소셜임팩트 서비스</strong>
+                                        <a href="#none"><strong>소셜임팩트 서비스</strong></a>
                                         <a href="#none"><span>카카오같이가치</span></a>
                                         <a href="#none"><span>카카오메이커스</span></a>
                                         
                                     </li>
                                     <li>
-                                        <strong>사회공헌</strong>
+                                        <a href="#none"><strong>사회공헌</strong></a>
                                         <a href="#none"><span>Next</span></a>
                                         <a href="#none"><span>Connect</span></a>
                                         <a href="#none"><span>Kakao krew</span></a>
                                     </li>
                                     <li>
-                                        <strong>상생</strong>
+                                        <a href="#none"><strong>상생</strong></a>
                                         <a href="#none"><span>상생센터</span></a>
                                         <a href="#none"><span>상생서포터즈</span></a>
                                         <a href="#none"><span>Kakao 클래스</span></a>
                                     </li>
                                     <li>
-                                        <strong>제주지역협력</strong>
+                                        <a href="#none"><strong>제주지역협력</strong></a>
                                         <a href="#none"><span>교육 산학</span></a>
                                         <a href="#none"><span>지역 상생</span></a>
                                         <a href="#none"><span>문화 교류</span></a>
                                         <a href="#none"><span>제주창조경제혁신센터</span></a>
                                     </li>
                                     <li>
-                                        <strong>제주창조경제혁신센터</strong>
+                                        <a href="#none"><strong>제주창조경제혁신센터</strong></a>
                                         
                                     </li>
                             
