@@ -17,7 +17,7 @@ class Banner extends Component{
         this.setState({
             index : selectedIndex,
             direction : e.direction
-        });
+        }, console.log(e.direction));
     }
 
     render(){

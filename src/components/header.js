@@ -109,18 +109,9 @@ class Header extends Component{
 
 
 
-    componentDidUpdate(prevProps, prevState){
-        window.addEventListener('mouseover', this.headerListener, true);
-        window.addEventListener('scroll', this.handleScroll, true);
-    }
-    
-    componentWillUnmount() {
-        window.removeEventListener('scroll', this.handleScroll);
-       window.removeEventListener('mouseover', this.headerListener);
-    }
       
     handleScroll = async() => {
-        await this.setState({
+        this.setState({
                 lastScrollY : window.scrollY
               })
         
@@ -137,7 +128,6 @@ class Header extends Component{
 
     headerListener=(e)=>{
         if(e.target === this.state.a_kakao){
-            // e.target.addEventListener('click', this.listFocusListener, true);
             e.target.click();
         }
 
