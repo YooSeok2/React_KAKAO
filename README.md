@@ -35,8 +35,12 @@
 <br>
 
 # 기술 설계
+
 <br>
+
 * **create-react-app 폴더명**을 통해 작업환경이 준비가 되어있는 상태로 시작한다.이는 facebook에서 관리하는 React Boilerplate code이다. 따로 Boilerplate를 만들어 사용할 경우 버전 관리 및 업데이트에서 시간을 많이 소모해야되고 번거롭다. 당장에 **webpack, babel**은 리엑트를 할 때에 필요한 요소이기에 포함해야 되는데 이들을 세팅하는 일이 엄청 복잡하다. 하지만 **create-react-app** 명령어 하나면 모든게 해결된다.
+
+<br>
 
 ```renux
     create-react-app react_instagram
@@ -325,6 +329,11 @@ banner.js에서 넘겨 받은 index값이 2와 4일 때 아래와 같이 구현�
     "react-scripts": "3.3.1"
   }
 ```
+
+<br>
+
+* ### 프로젝트 배포주소
+*https://yooskakao.netlify.app/*
 
 <br>
 
