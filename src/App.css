@@ -134,9 +134,7 @@
   padding-left: 13%;
 }
 
-.headerlang_1 > li{
-  margin-left: 1.5vw;
-}
+
 
 .headerlogo_2 {
   width: 24%;
@@ -221,9 +219,7 @@
   padding-left: 13%;
 }
 
-.headerlang_2 > li{
-  margin-left: 1.5vw;
-}
+
 
 .header:hover .headerlogo_2{
   width: 24%;

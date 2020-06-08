@@ -14,7 +14,7 @@
 
 <br>
 
-* **KaKao 메인화면**에 개발자코드를 참고하여 react를 사용해서 반응형으로 화면을 구현한다.
+* **KaKao 메인화면**을 ReactJS를 사용해 반응형으로 화면을 구현한다.
 
 ![main_tab](./images/main_tab.PNG)
 

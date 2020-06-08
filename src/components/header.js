@@ -3,6 +3,7 @@ import '../App.css';
 
 
 class Header extends Component{
+    
         header = null;
         
         // 헤더 리스트 ref값
@@ -28,8 +29,11 @@ class Header extends Component{
         div_service = null;
         div_customer = null;
         div_humanresource = null;
-   
-        
+
+        //getWeather
+        API_KEY = "9a8de0bc1768dd8cbe8daa901586f680";
+        COORDS = 'coords'
+        weather = ''
         
         
     constructor(props){
@@ -38,6 +42,56 @@ class Header extends Component{
             lastScrollY : 0,
             ticking : false,
             
+        }
+           
+    }
+
+    getWeather=(lat,lon)=>{
+        fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${this.API_KEY}&units=metric`
+        ).then((res)=>{
+            return res.json()
+        }).then((res)=>{
+            const temperature = res.main.temp
+            const weatherState = res.weather[0].main
+            const place = res.name
+            
+            this.weather = `${temperature}˚ @ ${weatherState}`
+        })
+     
+      
+    }
+    
+    saveCoords=(coords)=>{
+        localStorage.setItem(this.COORDS, JSON.stringify(coords))
+    }
+    
+    handleGeoSucces=(position)=>{
+        const latitude = position.coords.latitude
+        const longitude = position.coords.longitude
+        const coordsObj = {
+            latitude,
+            longitude
+        }
+        this.saveCoords(coordsObj)
+    }
+    
+    
+    handleGeoErro=(error)=>{
+        console.error(error)
+    }
+    
+    askForCoords = ()=>{
+        navigator.geolocation.getCurrentPosition(this.handleGeoSucces, this.handleGeoErro)
+    }
+    
+    init =()=>{
+        const loadedCords = localStorage.getItem(this.COORDS)
+        if(loadedCords === null){
+            this.askForCoords();
+        }else{
+            //getweather
+            const parseCords = JSON.parse(loadedCords)
+            this.getWeather(parseCords.latitude, parseCords.longitude) 
         }
     }
 
@@ -74,7 +128,7 @@ class Header extends Component{
     }
 
     componentDidMount(){
-        
+    this.init()
        this.setState({
             header : this.header,
             //헤더 리스트 ref 값 state값으로 저장
@@ -356,8 +410,8 @@ class Header extends Component{
                         </li>
                     </ul>
                     <ul className="headerlang_1">
-                        <li>KOR</li>
-                        <li>ENG</li>
+                        <li>{this.weather}</li>
+                        
                     </ul>
                 </div>
             </nav>
@@ -557,8 +611,8 @@ class Header extends Component{
                         </li>
                     </ul>
                     <ul className="headerlang_2">
-                        <li>KOR</li>
-                        <li>ENG</li>
+                        <li>{this.weather}</li>
+                        
                     </ul>
                 </div>
             </nav>
@@ -759,9 +813,10 @@ class Header extends Component{
                         </li>
                     </ul>
                     <ul className="headerlang_1">
-                        <li>KOR</li>
-                        <li>ENG</li>
+                        <li>{this.weather}</li>
+                        
                     </ul>
+                    
                 </div>
             </nav> 
 
